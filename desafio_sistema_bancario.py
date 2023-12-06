@@ -19,7 +19,7 @@ while True:
         valor_deposito = float(input('Quando deseja depositar? '))
         if valor_deposito > 0:
             saldo += valor_deposito
-            extrato.append(f'Depósito: + {valor_deposito:.2f}')
+            extrato.append(f'Depósito: + R$ {valor_deposito:.2f}')
             print('Depósito realizado com sucesso!')
         else:
             print('Por favor, insira um valor de depósito válido (positivo)!')
@@ -30,7 +30,7 @@ while True:
             if valor_saque > 0:
                 if 500 >= valor_saque <= saldo:
                     saldo -= valor_saque
-                    extrato.append(f'Saque: - {valor_saque:.2f}')
+                    extrato.append(f'Saque: - R$ {valor_saque:.2f}')
                     print('Saque realizado com sucesso!')
                     numero_saques += 1
                 elif valor_saque > saldo:
