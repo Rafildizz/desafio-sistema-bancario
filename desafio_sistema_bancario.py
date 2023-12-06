@@ -43,7 +43,7 @@ while True:
             print('Limite de saque diario excedido!')
            
     elif opcao == 'e':
-        print(f'\nExtrato: {saldo:.2f}')
+        print(f'\nExtrato: R$ {saldo:.2f}')
         for operacao in extrato:
             print(operacao)
     
