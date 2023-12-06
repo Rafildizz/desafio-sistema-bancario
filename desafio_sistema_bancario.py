@@ -27,15 +27,18 @@ while True:
     elif opcao == 's':
         if numero_saques < LIMITE_SAQUES:
             valor_saque = float(input('Quanto deseja sacar? '))
-            if 500 >= valor_saque <= saldo:
-                saldo -= valor_saque
-                extrato.append(f'Saque: - {valor_saque:.2f}')
-                print('Saque realizado com sucesso!')
-                numero_saques += 1
-            elif valor_saque > saldo:
-                print('Saldo insuficiente!')
+            if valor_saque > 0:
+                if 500 >= valor_saque <= saldo:
+                    saldo -= valor_saque
+                    extrato.append(f'Saque: - {valor_saque:.2f}')
+                    print('Saque realizado com sucesso!')
+                    numero_saques += 1
+                elif valor_saque > saldo:
+                    print('Saldo insuficiente!')
+                else:
+                    print('Valor maior do que o limite permitido!')
             else:
-                print('Valor maior do que o limite permitido!')
+                print('Por favor, insira um valor de saque válido (positivo)!')
         else:
             print('Limite de saque diario excedido!')
            
